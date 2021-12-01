@@ -18,6 +18,6 @@ The options are gradle build gradle bundleRelease etc.
 
 Note:- it only support OpenJdk-11.0.1 and Android gradle plugin is :-
         classpath "com.android.tools.build:gradle:7.2.0-alpha05"   // AAP2 Plugin
- 
+Need to install gradle wrapper so it will start download automatically
 
 Thanks to Tyron
