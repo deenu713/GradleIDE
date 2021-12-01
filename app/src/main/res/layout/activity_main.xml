@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".MainActivity"
+	tools:ignore="HardcodedText"
+	android:gravity="center_horizontal">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="top|center_horizontal">
+
+		<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="6dp"
+			android:layout_marginEnd="16dp"
+			android:hint="Select Project Path"
+			app:counterEnabled="true"
+			app:counterMaxLength="60"
+			app:endIconMode="custom"
+			app:endIconContentDescription="PathProjectFolder "
+			app:helperText="Clipboard Text Or Select Project Path"
+			app:endIconDrawable="@drawable/ic_attach"
+			android:id="@+id/textInputLayout">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:maxLength="60"
+				android:enabled="true"
+				android:id="@+id/textInputEditText"/>
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

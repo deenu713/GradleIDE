@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+        android:icon="@drawable/ic_buildtools" 
+		android:title=""
+		android:id="@+id/action_buildtools"
+        app:showAsAction="always"/>
+	<item
+        android:icon="@drawable/ic_create" 
+		android:title=""
+		android:id="@+id/action_create"
+        app:showAsAction="always"/>
+	<item
+        android:icon="@drawable/ic_run" 
+		android:title=""
+		android:id="@+id/action_gradle_build"
+        app:showAsAction="always"/>  
+		<item
+		android:title="Exit"
+		android:id="@+id/action_exit"
+		android:icon="@drawable/ic_exit"
+		app:showAsAction="always" />
+			
+</menu>

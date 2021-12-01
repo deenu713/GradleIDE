@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gradle.ide">
+
+    <!-- have full network access -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- prevent phone from sleeping -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- view network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- read the contents of your shared storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- modify or delete the contents of your shared storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- ask to ignore battery optimizations -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <!-- run foreground service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+		android:name=".service.ApplicationLoader"
+		android:requestLegacyExternalStorage="true"
+		android:extractNativeLibs="true">
+        <activity android:name=".activities.MainActivity">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".activities.DebugActivity"/>
+		<service
+		    android:name=".service.GradleService">
+		</service>
+    </application>
+
+</manifest>
