@@ -6,6 +6,7 @@ Download whole source code and extract
 Download the latest version of GradleIDE in release
 Install all the build tools like JDK SDK no need to install gradle 
 It will automatically download the gradle from gradle wrapper
+Or https://github.com/Deenu713/GradleIDE/tree/main/buildtools
 
 When u have installed the JDK SDK install the zip file gradle wrapper given below
 Install the gradle-7.2-rc-alpha02 aapt2 in settings icon Other
