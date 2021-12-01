@@ -1,2 +1,2 @@
 # GradleIDE
-GradleIde Port in android app
+Gradle Port In Android App
