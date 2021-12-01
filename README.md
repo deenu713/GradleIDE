@@ -1,3 +1,4 @@
+![Screenshot_20211201-155511](https://user-images.githubusercontent.com/82932744/144217561-8618dd4c-ae5a-457c-865d-4d8296008621.png)
 ![Screenshot_20211201-153200](https://user-images.githubusercontent.com/82932744/144217413-4d7be432-a6ec-49cf-98de-dc9abc251162.png)
 ![Screenshot_20211201-155242](https://user-images.githubusercontent.com/82932744/144217165-0fa80d03-ee0c-421e-bcc5-2ebd4e84a57f.png)
 ![Screenshot_20211201-155043](https://user-images.githubusercontent.com/82932744/144217174-f0bdc4db-fef3-49a6-9e4a-692707d7ffda.png)
@@ -23,5 +24,9 @@ The options are gradle build gradle bundleRelease etc.
 Note:- it only support OpenJdk-11.0.1 and Android gradle plugin is :-
         classpath "com.android.tools.build:gradle:7.2.0-alpha05"   // AAP2 Plugin
 Need to install gradle wrapper so it will start download automatically
+
+
+Device:- INFINIX HOT 10 AARCH64 
+Android Version :- Android 10
 
 Thanks to Tyron
