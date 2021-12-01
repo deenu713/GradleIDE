@@ -1,3 +1,6 @@
+![Screenshot_20211201-155242](https://user-images.githubusercontent.com/82932744/144217165-0fa80d03-ee0c-421e-bcc5-2ebd4e84a57f.png)
+![Screenshot_20211201-155043](https://user-images.githubusercontent.com/82932744/144217174-f0bdc4db-fef3-49a6-9e4a-692707d7ffda.png)
+![Screenshot_20211201-155007](https://user-images.githubusercontent.com/82932744/144217179-7a97d8d1-e6e4-4f35-bb1c-468681beb42b.png)
 [gradle-wrapper.zip](https://github.com/Deenu713/GradleIDE/files/7632940/gradle-wrapper.zip)
 # GradleIDE
 Gradle Port On Android App
