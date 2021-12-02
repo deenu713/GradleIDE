@@ -29,4 +29,6 @@ Need to install gradle wrapper so it will start download automatically
 Device:- INFINIX HOT 10 AARCH64 
 Android Version :- Android 10
 
+Hints:- Trying to Port Openjdk-17
+
 Thanks to Tyron
