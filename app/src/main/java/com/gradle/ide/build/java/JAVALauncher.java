@@ -58,8 +58,8 @@ public class JAVALauncher {
 		env.put("ANDROID_DATA", System.getenv("ANDROID_DATA"));
 		env.put("EXTERNAL_STORAGE", System.getenv("EXTERNAL_STORAGE"));
 		env.put("JAVA_HOME", mContext.getFilesDir() + "/openjdk-11.0.1");
-		env.put("ANDROID_SDK_ROOT", mContext.getFilesDir() + "/android-sdk");
-		addToEnvIfPresent(env, "ANDROID_ART_ROOT");
+     	env.put("ANDROID_SDK_ROOT", mContext.getFilesDir() + "/android-sdk");
+    	addToEnvIfPresent(env, "ANDROID_ART_ROOT");
 		addToEnvIfPresent(env, "DEX2OATBOOTCLASSPATH");
 		addToEnvIfPresent(env, "ANDROID_I18N_ROOT");
 		addToEnvIfPresent(env, "ANDROID_RUNTIME_ROOT");
@@ -69,7 +69,7 @@ public class JAVALauncher {
 			tempDir.mkdirs();
 		}
 		env.put("TMPDIR", tempDir.getAbsolutePath());
-		//env.put("LD_PRELOAD", Environment.getExternalStorageDirectory().getAbsolutePath() + "/AISDK/lib");
+	
 
 		if (customEnv != null) {
 		    env.putAll(customEnv);
