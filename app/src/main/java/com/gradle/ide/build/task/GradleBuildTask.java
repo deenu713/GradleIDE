@@ -51,17 +51,16 @@ public class GradleBuildTask extends Launcher {
 		
 		
 		args.add("-Xmx64m");
-		args.add("-Xms64m");
-		args.add("-Djava.awt.headless=true");
-		args.add("-Dorg.gradle.appname=gradlew");
-		args.add("-classpath");
-		args.add(Environment.getExternalStorageDirectory().getAbsolutePath() + "/AppProjects/Test/gradle/wrapper/gradle-wrapper.jar");
-		args.add(getContext().getFilesDir().getAbsolutePath() + "/gradle/wrapper/gradle-wrapper.jar");
-	    args.add("gradle/wrapper/gradle-wrapper.jar");
-		args.add("org.gradle.wrapper.GradleWrapperMain"); 	
-		args.add("build");
-		//args.add("assembleDebug");
-	//	args.add("--version");
+			/*args.add("-Xms64m");
+			args.add("-Djava.awt.headless=true");
+			args.add("-Dorg.gradle.appname=gradlew");
+			args.add("-classpath");
+			//	args.add(Environment.getExternalStorageDirectory().getAbsolutePath() + "/AppProjects/Test/gradle/wrapper/gradle-wrapper.jar");
+			args.add(getContext().getFilesDir().getAbsolutePath() + "/gradle/wrapper/gradle-wrapper.jar");
+			//args.add("gradle/wrapper/gradle-wrapper.jar");
+			args.add("org.gradle.wrapper.GradleWrapperMain"); 	
+                 	args.add("build");*/
+			args.add("--version");
         try {
             Process process = JavaLauncher.launchJVM(args);
             loadStream(process.getInputStream(), false);
