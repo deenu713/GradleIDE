@@ -27,11 +27,11 @@ public class GradleBuildTask extends Launcher {
         mProject = project;
     }
 
-	@Override
+		@Override
 	public void prepare() throws LauncherException {
 		Map<String, String> env = new HashMap<>();
 
-		env.put("HOME", getContext().getFilesDir().getAbsolutePath());
+        env.put("HOME", getContext().getFilesDir().getAbsolutePath());
 		env.put("JAVA_HOME", getContext().getFilesDir() + "/openjdk-11.0.1");
 		env.put("ANDROID_SDK_ROOT", getContext().getFilesDir() + "/android-sdk");
 		env.put("LD_LIBRARY_PATH", getContext().getFilesDir() + "/openjdk-11.0.1/lib:"
@@ -40,11 +40,7 @@ public class GradleBuildTask extends Launcher {
 				+ getContext().getFilesDir() + "/openjdk-11.0.1/lib/hm:");
 		JavaLauncher = new JAVALauncher(getContext());
 		JavaLauncher.setEnvironment(env);
-    }
-
-
-
-
+    } 
 	@Override
 	public void run() throws LauncherException, IOException {
 		List<String> args = new ArrayList<>();
