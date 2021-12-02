@@ -50,8 +50,8 @@ public class GradleBuildTask extends Launcher {
 		Prefs.putString("mProject", mProject.getAbsolutePath());
 		
 		
-		args.add("-Xmx64m");
-			/*args.add("-Xms64m");
+		/*args.add("-Xmx64m");
+			args.add("-Xms64m");
 			args.add("-Djava.awt.headless=true");
 			args.add("-Dorg.gradle.appname=gradlew");
 			args.add("-classpath");
