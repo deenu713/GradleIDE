@@ -69,7 +69,7 @@ public class JAVALauncher {
 			tempDir.mkdirs();
 		}
 		env.put("TMPDIR", tempDir.getAbsolutePath());
-		env.put("LD_PRELOAD", Environment.getExternalStorageDirectory().getAbsolutePath() + "/AISDK/lib");
+		//env.put("LD_PRELOAD", Environment.getExternalStorageDirectory().getAbsolutePath() + "/AISDK/lib");
 
 		if (customEnv != null) {
 		    env.putAll(customEnv);
