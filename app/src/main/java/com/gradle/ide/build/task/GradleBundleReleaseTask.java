@@ -31,13 +31,13 @@ public class GradleBundleReleaseTask extends Launcher {
 	public void prepare() throws LauncherException {
 		Map<String, String> env = new HashMap<>();
 
-        env.put("HOME", getContext().getFilesDir().getAbsolutePath());
-		env.put("JAVA_HOME", getContext().getFilesDir() + "/openjdk-11.0.1");
+		env.put("HOME", getContext().getFilesDir().getAbsolutePath());
+		env.put("JAVA_HOME", getContext().getFilesDir() + "/openjdk-17");
 		env.put("ANDROID_SDK_ROOT", getContext().getFilesDir() + "/android-sdk");
-		env.put("LD_LIBRARY_PATH", getContext().getFilesDir() + "/openjdk-11.0.1/lib:"
-		        + getContext().getFilesDir() + "/openjdk-11.0.1/lib/jli:" 
-				+ getContext().getFilesDir() + "/openjdk-11.0.1/lib/server:"
-				+ getContext().getFilesDir() + "/openjdk-11.0.1/lib/hm:");
+		env.put("LD_LIBRARY_PATH", getContext().getFilesDir() + "/openjdk-17/lib:"
+		        + getContext().getFilesDir() + "/openjdk-17/lib/jli:"
+				+ getContext().getFilesDir() + "/openjdk-17/lib/server:"
+				+ getContext().getFilesDir() + "/openjdk-17/lib/hm:");
 		JavaLauncher = new JAVALauncher(getContext());
 		JavaLauncher.setEnvironment(env);
     }
