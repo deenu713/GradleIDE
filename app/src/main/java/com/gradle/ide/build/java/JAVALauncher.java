@@ -57,7 +57,7 @@ public class JAVALauncher {
 		env.put("ANDROID_ROOT", System.getenv("ANDROID_ROOT"));
 		env.put("ANDROID_DATA", System.getenv("ANDROID_DATA"));
 		env.put("EXTERNAL_STORAGE", System.getenv("EXTERNAL_STORAGE"));
-		env.put("JAVA_HOME", mContext.getFilesDir() + "/openjdk-11.0.1");
+		env.put("JAVA_HOME", mContext.getFilesDir() + "/openjdk-17");
      	env.put("ANDROID_SDK_ROOT", mContext.getFilesDir() + "/android-sdk");
     	addToEnvIfPresent(env, "ANDROID_ART_ROOT");
 		addToEnvIfPresent(env, "DEX2OATBOOTCLASSPATH");
@@ -91,7 +91,7 @@ public class JAVALauncher {
         prepare();
 
         List<String> arguments = new ArrayList<>();
-        arguments.add(mContext.getFilesDir() + "/openjdk-11.0.1/bin/java");
+        arguments.add(mContext.getFilesDir() + "/openjdk-17/bin/java");
         arguments.addAll(args);
         pb.command(arguments);
         return pb.start();
