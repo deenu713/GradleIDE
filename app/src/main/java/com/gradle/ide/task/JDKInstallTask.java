@@ -100,7 +100,7 @@ public class JDKInstallTask extends AsyncTask<Uri, String, String> {
 			}
 			tarIn.close();
 
-			File renameFile = new File(getContext().getFilesDir(), "openjdk-11.0.1");
+			File renameFile = new File(getContext().getFilesDir(), "openjdk-17");
 			renameFile.mkdirs();
 
 			new File(getContext().getFilesDir(), name).renameTo(renameFile);
