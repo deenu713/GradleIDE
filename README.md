@@ -1,3 +1,4 @@
+![Screenshot_20211203-201940](https://user-images.githubusercontent.com/82932744/144622576-2ba68aec-b40e-4c00-880b-d13ac93c0e4d.png)
 ![Screenshot_20211201-155511](https://user-images.githubusercontent.com/82932744/144217561-8618dd4c-ae5a-457c-865d-4d8296008621.png)
 ![Screenshot_20211201-153200](https://user-images.githubusercontent.com/82932744/144217413-4d7be432-a6ec-49cf-98de-dc9abc251162.png)
 ![Screenshot_20211201-155242](https://user-images.githubusercontent.com/82932744/144217165-0fa80d03-ee0c-421e-bcc5-2ebd4e84a57f.png)
@@ -29,6 +30,7 @@ Need to install gradle wrapper so it will start download automatically
 Device:- INFINIX HOT 10 AARCH64 
 Android Version :- Android 10
 
-Hints:- Trying to Port Openjdk-17
+Its Supports Openjdk-17 now use GitHub Actions to build the project or Android Studio
+and change the min TargetSdk Version to 28  
 
 Thanks to Tyron
