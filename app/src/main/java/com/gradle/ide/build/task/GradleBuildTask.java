@@ -32,12 +32,12 @@ public class GradleBuildTask extends Launcher {
 		Map<String, String> env = new HashMap<>();
 
         env.put("HOME", getContext().getFilesDir().getAbsolutePath());
-		env.put("JAVA_HOME", getContext().getFilesDir() + "/openjdk-11.0.1");
+		env.put("JAVA_HOME", getContext().getFilesDir() + "/openjdk-17");
 		env.put("ANDROID_SDK_ROOT", getContext().getFilesDir() + "/android-sdk");
-		env.put("LD_LIBRARY_PATH", getContext().getFilesDir() + "/openjdk-11.0.1/lib:"
-		        + getContext().getFilesDir() + "/openjdk-11.0.1/lib/jli:" 
-				+ getContext().getFilesDir() + "/openjdk-11.0.1/lib/server:"
-				+ getContext().getFilesDir() + "/openjdk-11.0.1/lib/hm:");
+		env.put("LD_LIBRARY_PATH", getContext().getFilesDir() + "/openjdk-17/lib:"
+		        + getContext().getFilesDir() + "/openjdk-17/lib/jli:"
+				+ getContext().getFilesDir() + "/openjdk-17/lib/server:"
+					+ getContext().getFilesDir() + "/openjdk-17/lib/hm:");
 		JavaLauncher = new JAVALauncher(getContext());
 		JavaLauncher.setEnvironment(env);
     } 
@@ -50,17 +50,16 @@ public class GradleBuildTask extends Launcher {
 		Prefs.putString("mProject", mProject.getAbsolutePath());
 		
 		
-		/*args.add("-Xmx64m");
-			args.add("-Xms64m");
-			args.add("-Djava.awt.headless=true");
-			args.add("-Dorg.gradle.appname=gradlew");
-			args.add("-classpath");
-			//	args.add(Environment.getExternalStorageDirectory().getAbsolutePath() + "/AppProjects/Test/gradle/wrapper/gradle-wrapper.jar");
-			args.add(getContext().getFilesDir().getAbsolutePath() + "/gradle/wrapper/gradle-wrapper.jar");
-			//args.add("gradle/wrapper/gradle-wrapper.jar");
-			args.add("org.gradle.wrapper.GradleWrapperMain"); 	
-                 	args.add("build");*/
-			args.add("--version");
+		args.add("-Xmx64m");
+		args.add("-Xms64m");
+		args.add("-Djava.awt.headless=true");
+		args.add("-Dorg.gradle.appname=gradlew");
+		args.add("-classpath");
+		//	args.add(Environment.getExternalStorageDirectory().getAbsolutePath() + "/AppProjects/Test/gradle/wrapper/gradle-wrapper.jar");
+		args.add(getContext().getFilesDir().getAbsolutePath() + "/gradle/wrapper/gradle-wrapper.jar");
+		//args.add("gradle/wrapper/gradle-wrapper.jar");
+		args.add("org.gradle.wrapper.GradleWrapperMain"); 	
+		args.add("build");
         try {
             Process process = JavaLauncher.launchJVM(args);
             loadStream(process.getInputStream(), false);
