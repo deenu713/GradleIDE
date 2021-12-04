@@ -37,22 +37,26 @@ public class GradleAssembleDebugTask extends Launcher {
 					+ getContext().getFilesDir() + "/openjdk-17/lib/jli:"
 					+ getContext().getFilesDir() + "/openjdk-17/lib/server:"
 					+ getContext().getFilesDir() + "/openjdk-17/lib/hm:");
+			env.put("GRADLE_USER_HOME", getContext().getFilesDir() + "/.gradle");
+			File tempDir = new File(getContext().getCacheDir(), "temp");
+			if (!tempDir.exists()) {
+				tempDir.mkdirs();
+			}
+			env.put("TMPDIR", tempDir.getAbsolutePath());
+
 			JavaLauncher = new JAVALauncher(getContext());
 			JavaLauncher.setEnvironment(env);
-		}
-
-
-
-
+		} 
 		@Override
 		public void run() throws LauncherException, IOException {
 			List<String> args = new ArrayList<>();
-			/*	ClipboardManager clipboard = (ClipboardManager) getContext().getSystemService(getContext().CLIPBOARD_SERVICE); 
+			ClipboardManager clipboard = (ClipboardManager) getContext().getSystemService(getContext().CLIPBOARD_SERVICE); 
 
-			 File mProject = new File(clipboard.getText().toString());
-			 Prefs.putString("mProject", mProject.getAbsolutePath());*/
-
-
+			File mProject = new File(clipboard.getText().toString());
+			Prefs.putString("mProject", mProject.getAbsolutePath());
+			//args.add("-jar");
+			//	args.add("/storage/emulated/0/Download/gradle-7.3.1/lib/gradle-launcher-7.3.1.jar");
+			args.add("-Djava.io.tmpdir=" + getContext().getCacheDir().getAbsolutePath());
 			args.add("-Xmx64m");
 			args.add("-Xms64m");
 			args.add("-Djava.awt.headless=true");
@@ -61,8 +65,7 @@ public class GradleAssembleDebugTask extends Launcher {
 			//	args.add(Environment.getExternalStorageDirectory().getAbsolutePath() + "/AppProjects/Test/gradle/wrapper/gradle-wrapper.jar");
 			args.add(getContext().getFilesDir().getAbsolutePath() + "/gradle/wrapper/gradle-wrapper.jar");
 			//args.add("gradle/wrapper/gradle-wrapper.jar");
-			args.add("org.gradle.wrapper.GradleWrapperMain"); 	
-		//	args.add("build");
+			args.add("org.gradle.wrapper.GradleWrapperMain"); 
 			args.add("assembleDebug");
 			try {
 				Process process = JavaLauncher.launchJVM(args);
