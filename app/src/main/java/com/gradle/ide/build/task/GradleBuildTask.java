@@ -58,8 +58,8 @@ public class GradleBuildTask extends Launcher {
 		//args.add("-jar");
 	//	args.add("/storage/emulated/0/Download/gradle-7.3.1/lib/gradle-launcher-7.3.1.jar");
 		args.add("-Djava.io.tmpdir=" + getContext().getCacheDir().getAbsolutePath());
-	args.add("-Xmx64m");
-		args.add("-Xms64m");
+	args.add("-Xmx256m");
+		args.add("-Xms256m");
 		args.add("-Djava.awt.headless=true");
 		args.add("-Dorg.gradle.appname=gradlew");
 		args.add("-classpath");
