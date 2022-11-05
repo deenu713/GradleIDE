@@ -1,4 +1,4 @@
-package com.gradle.ide.activities;
+package com.android.studio.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
