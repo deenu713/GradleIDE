@@ -13,13 +13,13 @@ public final class R {
 		public static final int colorPrimaryDark = 1;
 	}
 	public static final class drawable {
-		public static final int bg_round = 7;
+		public static final int bg_round = 8;
 		public static final int ic_android = 3;
 		public static final int ic_attach = 10;
 		public static final int ic_buildtools = 6;
 		public static final int ic_create = 9;
 		public static final int ic_exit = 5;
-		public static final int ic_kotlin = 8;
+		public static final int ic_kotlin = 7;
 		public static final int ic_run = 4;
 	}
 	public static final class mipmap {
